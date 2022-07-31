@@ -8,27 +8,33 @@ const productos = [
     {id:6, nombres: "Silla Bertoia", precio: 12500}
 ];
 
-const nombre = prompt("Ingrese su nombre por favor");
-const preguntaEntrada = prompt("Hola " + nombre + ", deseas ver nuestro catalogo Online? (Ingresar SI/NO) ").toUpperCase();
 
-if (preguntaEntrada == "SI" ) {
-    alert("Excelente!! Dale aceptar para conocer nuestro linea de productos!");
-} else {
-    prompt("UPS!! seguro te lo vas a perder??? TE DAMOS OTRA OPORTUNIDAD.. (Ingresar SI/NO para ver nuestro catalogo)").toUpperCase();
-}
+const entrada = prompt("Hola! para una mejor experiencia ingrese su nombre por favor!")
 
-function catalogoAgosto() { 
-    let muestra = "Nuestro Catalogo de Agosto!" ;
-
-    for (let catalogo of productos) {
-        muestra += catalogo.id + " - " + catalogo.nombres + ": $" + catalogo.precio;
-    } 
-}
-
-function muestraCatalogo() {
-    return((preguntaEntrada) => "SI" == catalogoAgosto);
-}
-
-
-
+const entradaUno = (entrada) => {
+    if ( entrada == "") {
+    prompt("Ok! Quiere conocer nuestro catalogo? SI/NO").toUpperCase();
+    } else {
+    prompt("Hola " + entrada + " deseas conocer nuestro catalogo? SI/NO").toUpperCase();
+        if ("SI") {
+            alert("Perfecto! Dale aceptar para ver nuestro catalogo!");
+        } else if ("NO") {
+            alert("Te esperamos en otro momento!");
+        } else {
+            prompt ("Ingrese nuevamente la opción por favor!");
+        }
+    }
     
+}
+entradaUno(entrada);
+
+function mostrarCatalogo(){
+    let mostrar = "Eliga su producto poniendo el número de ID! \n\n";
+    for (let catalogo of productos) {
+        mostrar += "ID: " + catalogo.id + " - " + catalogo.nombres + ": $" + catalogo.precio + "\n";  
+        console.log("ID: " + catalogo.id + " - " + catalogo.nombres + ": $" + catalogo.precio + "\n");
+    }
+    prompt(mostrar);
+}
+
+mostrarCatalogo();
