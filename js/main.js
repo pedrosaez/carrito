@@ -9,27 +9,26 @@ const productos = [
 ];
 
 
-const entrada = prompt("Hola! para una mejor experiencia ingrese su nombre por favor!")
+const entrada = prompt("Hola! para una mejor experiencia ingrese su nombre por favor!");
 
 const entradaUno = (entrada) => {
     if ( entrada == "") {
     prompt("Ok! Quiere conocer nuestro catalogo? SI/NO").toUpperCase();
     } else {
-    prompt("Hola " + entrada + " deseas conocer nuestro catalogo? SI/NO").toUpperCase();
-        if ("SI") {
-            alert("Perfecto! Dale aceptar para ver nuestro catalogo!");
-        } else if ("NO") {
-            alert("Te esperamos en otro momento!");
+    let pregunta = prompt("Hola " + entrada + " deseas conocer nuestro catalogo? SI/NO").toUpperCase();
+        if ( pregunta == "SI") {
+            prompt(mostrarCatalogo());
         } else {
-            prompt ("Ingrese nuevamente la opción por favor!");
+            alert("Te esperamos en otro momento!");
         }
     }
     
 }
+
 entradaUno(entrada);
 
 function mostrarCatalogo(){
-    let mostrar = "Eliga su producto poniendo el número de ID! \n\n";
+    let mostrar = "Elija su producto poniendo el número de ID! \n\n";
     for (let catalogo of productos) {
         mostrar += "ID: " + catalogo.id + " - " + catalogo.nombres + ": $" + catalogo.precio + "\n";  
         console.log("ID: " + catalogo.id + " - " + catalogo.nombres + ": $" + catalogo.precio + "\n");
@@ -37,4 +36,3 @@ function mostrarCatalogo(){
     prompt(mostrar);
 }
 
-mostrarCatalogo();
