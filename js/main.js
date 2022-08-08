@@ -10,6 +10,7 @@ const productos = [
     {id:6, nombres: "Silla Bertoia", precio: 12500}
 ];
 
+// JAIDER ESTOY PROBANDO COMO HACER EL CARRITO POR ESO TANTO CODIGO SIN USAR, MIL DISCULPAS!!!!
 
 const entrada = prompt("Hola! para una mejor experiencia ingrese su nombre por favor!");
 
