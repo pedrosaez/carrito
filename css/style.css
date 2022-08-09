@@ -11,8 +11,14 @@
 }
 
 #titulo{
-    color: aliceblue;
+    color: rgb(189, 109, 228);
     text-align: center;
     padding: 12px;
     font-family: Montserrat SemiBold;
+}
+
+#nombreBienvenida{
+    text-align: center;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
 }

@@ -1,5 +1,7 @@
 let div = document.getElementById("div1");
 let h1 = document.getElementById("titulo");
+let entrada = prompt("Hola! para una mejor experiencia ingrese su nombre por favor!");
+nombreBienvenida.innerHTML = "Bienvenida/o " + entrada + ", gracias por visitar nuestro carrito de compras de prueba!";
 
 const productos = [
     {id:1, nombres: "Mesa Julia", precio: 50000},
@@ -12,26 +14,25 @@ const productos = [
 
 // JAIDER ESTOY PROBANDO COMO HACER EL CARRITO POR ESO TANTO CODIGO SIN USAR, MIL DISCULPAS!!!!
 
-const entrada = prompt("Hola! para una mejor experiencia ingrese su nombre por favor!");
 
-const entradaUno = (entrada) => {
+/* const entradaUno = (entrada) => {
     if ( entrada == "") {
     prompt("Ok! Quiere conocer nuestro catalogo? SI/NO").toUpperCase();
     } else {
     const pregunta = prompt("Hola " + entrada + " deseas conocer nuestro catalogo? SI/NO").toUpperCase();
     console.log("Pregunta dentro de la función entradaUno : " + pregunta);
-       /*  if ( pregunta == "SI") {
+        if ( pregunta == "SI") {
             compra = parseInt(prompt(mostrarCatalogo()));
         } else {
             alert("Ok, esperamos la proxima!");
-        } */
+        } 
     }
     
     
 } 
 
 entradaUno(entrada);
-
+ */
 
 /* const muestra =function mostrarCatalogo(respuesta){
     console.log("Aca esta la respuesta que entra en mostrarCatalogo: " + pregunta);
