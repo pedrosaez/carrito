@@ -4,13 +4,23 @@ let entrada = prompt("Hola! para una mejor experiencia ingrese su nombre por fav
 nombreBienvenida.innerHTML = "Bienvenida/o " + entrada + ", gracias por visitar nuestro carrito de compras de prueba!";
 
 const productos = [
-    {id:1, nombres: "Mesa Julia", precio: 50000},
-    {id:2, nombres: "Rack Tv", precio: 45000},
-    {id:3, nombres: "Sofá Barcelona", precio: 85000},
-    {id:4, nombres: "Sofá Chester", precio: 105000},
-    {id:5, nombres: "Lampara pie", precio: 20000},
-    {id:6, nombres: "Silla Bertoia", precio: 12500}
+    {id:1, nombres: "Mesa Julia", precio: 50000, imagen:"mesaJulia.jpg"},
+    {id:2, nombres: "Rack Tv", precio: 45000, imagen:"rack.jpg"},
+    {id:3, nombres: "Sofá Barcelona", precio: 85000, imagen:"sillon2.jpg"},
+    {id:4, nombres: "Sofá Chester", precio: 105000, imagen:"sillon5.jpg"},
+    {id:5, nombres: "Mesa Ratona", precio: 20000, imagen:"mesaRatona.jpg"}   
 ];
+
+for (const producto of productos) {
+    let contenedor = document.createElement("div");
+    contenedor.innerHTML=   `<h4>ID: ${producto.id}<h4>
+                            <p>Producto: ${producto.nombres}<br>
+                            <img src="img/${producto.imagen}"width="180"><br>
+                            <b>$${producto.precio}</b></p>
+                            <hr>`;
+    document.getElementById("muebles").appendChild(contenedor);                        
+
+}
 
 // JAIDER ESTOY PROBANDO COMO HACER EL CARRITO POR ESO TANTO CODIGO SIN USAR, MIL DISCULPAS!!!!
 
@@ -79,7 +89,7 @@ function entradaCarrito(idElegido) {
 
 
 // Aca no llega el prompt pregunta
-const una = function(pregunta) {
+/* const una = function(pregunta) {
     console.log(pregunta);
     if (pregunta == "SI"){
         let mostrar = "Elija su producto poniendo el número de ID! Escriba ´ESC´ para terminar \n\n";
@@ -91,7 +101,7 @@ const una = function(pregunta) {
         prompt("Ok, te esperamos la proxima!")
     }
     
-}
+} */
 
 
 
