@@ -1,8 +1,3 @@
-let div = document.getElementById("div1");
-let h1 = document.getElementById("titulo");
-let entrada = prompt("Hola! para una mejor experiencia ingrese su nombre por favor!");
-nombreBienvenida.innerHTML = "Bienvenida/o " + entrada + ", gracias por visitar nuestro carrito de compras de prueba!";
-
 const productos = [
     {id:1, nombres: "Mesa Julia", precio: 50000, imagen:"mesaJulia.jpg"},
     {id:2, nombres: "Rack Tv", precio: 45000, imagen:"rack.jpg"},
@@ -10,6 +5,18 @@ const productos = [
     {id:4, nombres: "Sofá Chester", precio: 105000, imagen:"sillon5.jpg"},
     {id:5, nombres: "Mesa Ratona", precio: 20000, imagen:"mesaRatona.jpg"}   
 ];
+
+let div = document.getElementById("div1");
+let h1 = document.getElementById("titulo");
+let entrada = prompt("Hola! para una mejor experiencia ingrese su nombre por favor!");
+nombreBienvenida.innerHTML = "Bienvenida/o " + entrada + ", gracias por visitar nuestro carrito de compras de prueba!";
+
+const agregarCarrito = document.getElementById("agregar");
+agregarCarrito.addEventListener("click", agregarEnCarrito);
+
+function agregarEnCarrito(){
+    alert("Acabas de agregar un producto al carrito!");
+}
 
 for (const producto of productos) {
     let contenedor = document.createElement("div");
