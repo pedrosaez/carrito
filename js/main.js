@@ -13,6 +13,7 @@ const productos = [
 
 for (const producto of productos) {
     let contenedor = document.createElement("div");
+    contenedor.className= "col-md-4";  
     contenedor.innerHTML=   `<h4>ID: ${producto.id}<h4>
                             <p>Producto: ${producto.nombres}<br>
                             <img src="img/${producto.imagen}"width="180"><br>
