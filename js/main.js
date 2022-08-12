@@ -6,6 +6,8 @@ const productos = [
     {id:5, nombres: "Mesa Ratona", precio: 20000, imagen:"mesaRatona.jpg"}   
 ];
 
+//JAIDER EN LA PRIMER CARDS ANDA EL EVENTO, AHORA ESTOY HACIENDO QUE FUNCIONE EN LAS DEMAS PERO TENDRIA QUE CAMBIAR LAS COSAS YA QUE ESAS CARDS LAS AGREGO EN DOM 
+
 let div = document.getElementById("div1");
 let h1 = document.getElementById("titulo");
 let entrada = prompt("Hola! para una mejor experiencia ingrese su nombre por favor!");
@@ -16,9 +18,23 @@ agregarCarrito.addEventListener("click", agregarEnCarrito);
 
 function agregarEnCarrito(){
     alert("Acabas de agregar un producto al carrito!");
-}
+}    
 
 for (const producto of productos) {
+    let contenedor = document.createElement("div");
+    contenedor.className= "col-md-4";  
+    contenedor.innerHTML=   `<div class="card text-center border border-0" style="width: 18rem;">
+                            <img src="./img/${producto.imagen}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                            <h5 class="card-title">${producto.nombres}</h5>
+                            <p class="card-text">$${producto.precio}</p>
+                            <button id="agregar" href="#" class="btn btn-primary">Agregar al carrito</button>
+                            </div>`;
+    document.getElementById("muebles").appendChild(contenedor);                        
+
+}
+
+/* for (const producto of productos) {
     let contenedor = document.createElement("div");
     contenedor.className= "col-md-4";  
     contenedor.innerHTML=   `<h4>ID: ${producto.id}<h4>
@@ -28,7 +44,7 @@ for (const producto of productos) {
                             <hr>`;
     document.getElementById("muebles").appendChild(contenedor);                        
 
-}
+} */
 
 // JAIDER ESTOY PROBANDO COMO HACER EL CARRITO POR ESO TANTO CODIGO SIN USAR, MIL DISCULPAS!!!!
 
