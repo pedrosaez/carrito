@@ -28,7 +28,7 @@ for (const producto of productos) {
                             <div class="card-body">
                             <h5 class="card-title">${producto.nombres}</h5>
                             <p class="card-text">$${producto.precio}</p>
-                            <button id="agregar" href="#" class="btn btn-primary">Agregar al carrito</button>
+                            <button id="agregar" href="#" class="btn btn-dark">Agregar al carrito</button>
                             </div>`;
     document.getElementById("muebles").appendChild(contenedor);                        
 
