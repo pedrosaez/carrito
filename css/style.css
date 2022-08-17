@@ -3,22 +3,3 @@
     margin: 0%;
     box-sizing: border-box;
 }
-
-#div1{
-    width: 100%;
-    height: 60px;
-    background-color: black;
-}
-
-#titulo{
-    color: rgb(189, 109, 228);
-    text-align: center;
-    padding: 12px;
-    font-family: Montserrat SemiBold;
-}
-
-#nombreBienvenida{
-    text-align: center;
-    padding: 10px;
-    font-family: "Poppins", sans-serif;
-}
