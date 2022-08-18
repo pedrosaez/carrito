@@ -50,7 +50,7 @@ function vistaMuebles(){
     let catalogo = "";
 
     muebles.forEach((mueble) => {
-        catalogo += `<div class= "col-md-4">
+        catalogo += `<div class="col-md-4 row justify-content-center">
                     <div class="card text-center border border-0" style="width: 18rem;">
                     <img src="./img/${mueble.imagen}" class="card-img-top" alt="${mueble.nombres}">
                     <div class="card-body">
