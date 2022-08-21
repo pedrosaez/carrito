@@ -7,9 +7,8 @@
 #muebles{
     display: flex;   
 }
-
-.logo{
-   
+.botonCarrito{
+    padding-right: 30px;
 }
 
 .nav{

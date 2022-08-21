@@ -15,6 +15,8 @@ function cargarMueblesLs() {
     return JSON.parse(localStorage.getItem("muebles")) || [];
 }
 
+mueblesEnLs(muebles);
+
 function mueblesEnCarrito(muebles) {
     localStorage.setItem("mueblesCarrito", JSON.stringify(muebles));
 }
@@ -42,7 +44,7 @@ function actualizarCarrito(){
 
 }
 
-mueblesEnLs(muebles);
+
 
 
 function vistaMuebles(){
