@@ -4,8 +4,21 @@
     box-sizing: border-box;
 }
 
+.navbar{
+    background-color: #aa896d;
+}
+
+/* header{
+    width: 100%;
+    height: 200px;
+    background-color: #aa896d;
+} */
 #muebles{
     display: flex;   
+}
+
+.card{
+    padding: 24px;
 }
 
 .nav{

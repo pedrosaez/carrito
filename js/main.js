@@ -52,7 +52,7 @@ const muebles = cargarMueblesLs();
 let catalogo = "";
 
 muebles.forEach((mueble) => {
-catalogo += `<div class="col-md-3 row justify-content-center">
+catalogo += `<div class="col-md-3 col-xs-12 justify-content-center">
             <div class="card text-center border border-0" style="width: 18rem;">
             <img src="./img/${mueble.imagen}" class="card-img-top" alt="${mueble.nombres}">
             <div class="card-body">
