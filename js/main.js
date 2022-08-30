@@ -68,7 +68,7 @@ let contenido = `<nav class="navbar navbar-expand-lg bg-dark">
     </div>
     <!-- Button trigger modal -->
 <div class="boton2">    
-<button type="button" class="boton1 btn btn-outline-light rounded-5 border-3 position-relative" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+<button type="button" class="boton1 btn btn-outline-light rounded-5 border border-0 position-relative" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
 <i class="imgCarrito fa-solid fa-basket-shopping"></i>
 <span class="badge text-bg-danger position-absolute top-0 start-100 translate-middle badge rounded-pill">0</span>
 </button>
@@ -76,31 +76,26 @@ let contenido = `<nav class="navbar navbar-expand-lg bg-dark">
 
 <!-- Modal -->
 <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<div class="modal-dialog">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="staticBackdropLabel">Carrito MÜIND</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        Producto producto
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Vaciar carrito <i class="imgTachito fa-regular fa-trash-can"></i></button>
-        <button type="button" class="btn btn-primary">Pagar</button>
-      </div>
+        <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Carrito MÜIND</h5>
+    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
-  </div>
+        <div class="modal-body">
+        Producto producto
+    </div>
+    <div class="modal-footer">
+    <button type="button" class="rounded-pill btn btn-outline-danger" data-bs-dismiss="modal">Vaciar carrito <i class="imgTachito fa-regular fa-trash-can"></i></button>
+        <button type="button" class="rounded-pill btn btn-outline-success">Pagar</button>
+        </div>
+        </div>
+    </div>
 </div>
     
 </div>
 </nav>`;
-{/* <div class="boton2">
-        <button type="button" class="boton1 btn btn-outline-light rounded-5 border-3 position-relative">
-            <i class="imgCarrito fa-solid fa-basket-shopping"></i>
-            <span class="badge text-bg-danger position-absolute top-0 start-100 translate-middle badge rounded-pill">0</span>
-        </button>
-    </div> */}
+
 document.getElementById("carrito").innerHTML = contenido;
 }
 
@@ -115,14 +110,16 @@ catalogo += `<div class="col-md-3 justify-content-center">
             <div class="card-body">
             <h5 class="card-title">${mueble.nombres}</h5>
             <p class="card-text">$${mueble.precio}</p>
-            <a href="#" class="btn btn-outline-dark" title="Agregar" onclick="agregarMuebles(${mueble.id})">Agregar al carrito</a>
+            <a href="#" class=" rounded-pill btn btn-outline-dark" title="Agregar" onclick="agregarMuebles(${mueble.id})">Agregar al carrito</a>
             </div>
             </div>
         </div>`;
     }); 
 
 document.getElementById("muebles").innerHTML = catalogo;
-}
+};
+
+
 
 
 mueblesEnLs(muebles);
