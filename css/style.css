@@ -4,6 +4,8 @@
     box-sizing: border-box;
 }
 
+
+
 .logoCarrito {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -16,9 +18,8 @@
 }
     
 .logo { 
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-    
+    padding-left: 10px;
+    width: 80px;
 }
 
 .carrito { 
@@ -27,15 +28,31 @@
     padding: 10px 40px;
 }
 
+.boton2{
+    padding-right: 20px;
+}
+
 .boton1{
     padding: 10px;
-    
 }
 
 
 .imgCarrito {
     padding: 2px;
     font-size: 17px;
+}
+
+.tachitoImg {
+    padding: 2px;
+    font-size: 10px;
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    font-family:  Montserrat SemiBold;
+    color: #000000ce;
+    padding: 20px;
 }
 
 #muebles{
@@ -50,8 +67,12 @@
     padding-bottom: 30px;
 }
 
+.nav-item{
+    padding-left: 20px;
+}
+
 .nav-link{
-    color: #000000ce;
+    color: white;
     font-family:  Readex Pro;
 }
 
