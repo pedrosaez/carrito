@@ -41,7 +41,7 @@ function actualizarCarrito() {
 /* const mueblesCarrito = mueblesEnCarrito();
 let total = mueblesCarrito.length; */
 let contenido = `<nav class="navbar bg-dark">
-<div class=" navbar1 container-fluid">
+<div class="container-fluid">
         <a class="navbar-brand text-light">MÜIND HOME</a>
         <button type="button" class="boton1 btn btn-outline-light rounded-5 border-3 position-relative">
         <i class="imgCarrito fa-solid fa-basket-shopping"></i>
@@ -60,8 +60,8 @@ const muebles = cargarMueblesLs();
 let catalogo = "";
 
 muebles.forEach((mueble) => {
-catalogo += `<div class="col-md-3 col-xs-12 justify-content-center">
-            <div class="card text-center border border-0" style="width: 18rem;">
+catalogo += `<div class="col-md-3 justify-content-center">
+            <div class="card text-center border border-0">
             <img src="./img/${mueble.imagen}" class="card-img-top" alt="${mueble.nombres}">
             <div class="card-body">
             <h5 class="card-title">${mueble.nombres}</h5>
