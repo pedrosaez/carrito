@@ -48,7 +48,7 @@ function actualizarCarrito() {
 const mueblesCarrito = mueblesEnCarrito();
 //let total = mueblesCarrito.length;
 let contenido = `<nav class="navbar navbar-expand-lg bg-dark">
-<img class="logo" src="./img/logoMH-02.png" alt="LogoMuind
+<img class="logo" src="./img/logoMH-02.png" alt="">
 <div class="container-fluid">
 <button class="border border-0 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
