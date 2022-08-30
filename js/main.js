@@ -37,14 +37,22 @@ function agregarMuebles(id) {
     
 }
 
-
 function actualizarCarrito() {
-const mueblesCarrito = mueblesEnCarrito();
-let total = mueblesCarrito.length;
-let contenido = `<button type="button" class="btn btn-primary position-relative">Carrito
-<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">${total}</span>
-</button>`;
-document.getElementById("botonCarrito").innerHTML = contenido;
+/* const mueblesCarrito = mueblesEnCarrito();
+let total = mueblesCarrito.length; */
+let contenido = `<nav class="navbar bg-dark">
+<div class=" navbar1 container-fluid">
+        <a class="navbar-brand text-light">MÜIND HOME</a>
+        <button type="button" class="boton1 btn btn-outline-light rounded-5 border-3 position-relative">
+        <i class="imgCarrito fa-solid fa-basket-shopping"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+        99+
+            </span>
+        </button>
+    </form>
+</div>
+</nav>`;
+document.getElementById("carrito").innerHTML = contenido;
 }
 
 function vistaMuebles() {
