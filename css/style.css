@@ -16,11 +16,9 @@
 }
     
 .logo { 
-    width: 70%;
-    color: white;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 10px;
-    padding: 10px 20px;
+
+    
 }
 
 .carrito { 
@@ -31,6 +29,7 @@
 
 .boton1{
     padding: 10px;
+    
 }
 
 
@@ -53,4 +52,10 @@
 
 .nav-link{
     color: #000000ce;
+    font-family:  Readex Pro;
+}
+
+.card-title{
+    color: #000000ce;
+    font-family:  Readex Pro;
 }
