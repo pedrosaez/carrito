@@ -4,7 +4,8 @@ const muebles = [
     { id: 3, nombres: "Sofá Barcelona", precio: 85000, imagen: "sillon2.jpg" },
     { id: 4, nombres: "Sofá Chester", precio: 105000, imagen: "sillon5.jpg" },
     { id: 5, nombres: "Mesa Ratona", precio: 20000, imagen: "mesaRatona.jpg" },
-    { id: 5, nombres: "Vanitory", precio: 30000, imagen: "vanitory.jpg" },
+    { id: 6, nombres: "Vanitory", precio: 30000, imagen: "vanitory.jpg" },
+    
 ];
     const mueblesCarrito = [];
 
@@ -49,7 +50,7 @@ const mueblesCarrito = mueblesEnCarrito();
 //let total = mueblesCarrito.length;
 let contenido = `<nav class="navbar navbar-expand-lg bg-dark">
 <img class="logo" src="./img/logoMH-02.png" alt="">
-<div class="container-fluid">
+
 <button class="border border-0 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
 </button>
@@ -79,7 +80,7 @@ let contenido = `<nav class="navbar navbar-expand-lg bg-dark">
 <div class="modal-dialog">
     <div class="modal-content">
         <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Carrito MÜIND</h5>
+            <h5 class="modal-title" id="staticBackdropLabel">Carrito de compras</h5>
     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
     </div>
         <div class="modal-body">
@@ -87,7 +88,7 @@ let contenido = `<nav class="navbar navbar-expand-lg bg-dark">
     </div>
     <div class="modal-footer">
     <button type="button" class="rounded-pill btn btn-outline-danger" data-bs-dismiss="modal">Vaciar carrito <i class="imgTachito fa-regular fa-trash-can"></i></button>
-        <button type="button" class="rounded-pill btn btn-outline-success">Pagar</button>
+        <button type="button" class="rounded-pill btn btn-outline-success data-bs-dismiss="modal" onclick="alerta()">Pagar</button>
         </div>
         </div>
     </div>
@@ -97,6 +98,16 @@ let contenido = `<nav class="navbar navbar-expand-lg bg-dark">
 </nav>`;
 
 document.getElementById("carrito").innerHTML = contenido;
+}
+
+function alerta(){
+    Swal.fire({
+        position: 'top-center',
+        icon: 'success',
+        title: 'Gracias por tu compra!',
+        showConfirmButton: false,
+        timer: 1500
+    })
 }
 
 function vistaMuebles() {
