@@ -87,7 +87,7 @@ let contenido = `<nav class="navbar navbar-expand-lg bg-dark">
         Producto producto
     </div>
     <div class="modal-footer">
-    <button type="button" class="rounded-pill btn btn-outline-danger" data-bs-dismiss="modal">Vaciar carrito <i class="imgTachito fa-regular fa-trash-can"></i></button>
+    <button type="button" class="rounded-pill btn btn-outline-danger">Vaciar carrito <i class="imgTachito fa-regular fa-trash-can"></i></button>
         <button type="button" class="rounded-pill btn btn-outline-success data-bs-dismiss="modal" onclick="alerta()">Pagar</button>
         </div>
         </div>
@@ -106,9 +106,10 @@ function alerta(){
         icon: 'success',
         title: 'Gracias por tu compra!',
         showConfirmButton: false,
-        timer: 1500
+        timer: 1000
     })
 }
+
 
 function vistaMuebles() {
 const muebles = cargarMueblesLs();
@@ -121,7 +122,7 @@ catalogo += `<div class="col-md-3 justify-content-center">
             <div class="card-body">
             <h5 class="card-title">${mueble.nombres}</h5>
             <p class="card-text">$${mueble.precio}</p>
-            <a href="#" class=" rounded-pill btn btn-outline-dark" title="Agregar" onclick="agregarMuebles(${mueble.id})">Agregar al carrito</a>
+            <a href="#" class="agregarAlCarrito rounded-pill btn btn-outline-dark" title="Agregar" onclick= "compraAprobada()" onclick="agregarMuebles(${mueble.id})"  >Agregar al carrito</a>
             </div>
             </div>
         </div>`;
@@ -130,6 +131,16 @@ catalogo += `<div class="col-md-3 justify-content-center">
 document.getElementById("muebles").innerHTML = catalogo;
 };
 
+
+function compraAprobada(){
+    Toastify({
+        text: "Producto agregado",
+        className: "info",
+        style: {
+        background: "#aa896d",
+    }
+    }).showToast();
+}
 
 
 

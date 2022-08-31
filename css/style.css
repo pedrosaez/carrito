@@ -52,7 +52,7 @@
 h1{
     width: 100%;
     text-align: center;
-    font-family:  Montserrat SemiBold;
+    font-family:   'Montserrat', sans-serif;
     color: #000000ce;
     padding: 20px;
 }
@@ -63,6 +63,10 @@ h1{
 
 .card{
     padding: 24px;
+}
+
+.agregarAlCarrito{
+    font-family:   'Montserrat', sans-serif;
 }
 
 .nav{
