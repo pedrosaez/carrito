@@ -8,7 +8,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;0,800;1,800&display=swap');
 
 
-.logoCarrito {
+body{
+    background-color: rgb(236, 239, 239);
+}
+
+
+/* #nav{
+    width: 100%;
+    height: 500px;
+    background-image: url(../img/rack.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 0 0 50px 50px;
+}
+.titulo{
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+} */
+/* .logoCarrito {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr;
@@ -17,9 +36,9 @@
     align-items: center;
     height: auto;
     background-color: #000000ce;
-}
+} */
     
-.logo { 
+/* .logo { 
     padding-left: 10px;
     width: 80px;
 }
@@ -37,32 +56,88 @@
 .boton1{
     padding: 10px;
 }
+*/
 
 
-.imgCarrito {
-    padding: 2px;
-    font-size: 17px;
-}
 
-.imgTachito {
+/* .imgTachito {
     padding: 2px;
     font-size: 10px;
-}
+} */
 
-h1{
-    width: 100%;
+/* .divisor{
     text-align: center;
     font-family:   'Montserrat', sans-serif;
     color: #000000ce;
     padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+ */
+
+
+.jumbotron{
+    height: 450px;
+    background-image: url(../img/rack.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    border-radius: 0 0 50px 50px;
+    margin-bottom: 10px;
+}
+
+#seccionMuebles {
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin: 0%;
+    padding: 2px;
+}
+
+.carrito1 {
+    width: 40px;
+    margin: 10px;
+} 
+
+.imgCarrito {
+    font-size: 30px;
+    color: #000000ce;
+    text-align: center;
+    padding: auto;
+}    
+
+.imgCarrito:hover{
+    transform: scale(1.08);
+    transition: all 0.3s;
+    color: #aa896d;
+        
+}
+
+.span1 {
+    margin-right: 20px;
+}
+
+.divisor { 
+    font-family:   'Montserrat', sans-serif;
+    color: #000000ce;
+    text-align: center;
 }
 
 #muebles{
     display: flex;   
 }
-
 .card{
-    padding: 24px;
+    margin: 10px;
+    box-shadow: 7px 10px 27px #0008;
+}
+
+.card-img-top:hover{
+    transform: scale(1.03);
+    transition: all 0.3s;
+}
+.card-body{
+    padding-bottom: 15px;
+
 }
 
 .agregarAlCarrito{

@@ -5,6 +5,8 @@ const muebles = [
     { id: 4, nombres: "Sofá Chester", precio: 105000, imagen: "sillon5.jpg" },
     { id: 5, nombres: "Mesa Ratona", precio: 20000, imagen: "mesaRatona.jpg" },
     { id: 6, nombres: "Vanitory", precio: 30000, imagen: "vanitory.jpg" },
+    { id: 7, nombres: "Sofa Liverpool", precio: 20000, imagen: "rack.jpg" },
+    { id: 8, nombres: "Silla Bertoia", precio: 30000, imagen: "sillon2.jpg" },
     
 ];
     const mueblesCarrito = [];
@@ -21,9 +23,10 @@ function mueblesEnCarrito(muebles) {
     localStorage.setItem("mueblesCarrito", JSON.stringify(muebles));
 }
 
-function cargarMueblesCarrito() {
+function cargarMueblesCarrito(){
     return JSON.parse(localStorage.getItem("mueblesCarrito")) || [];
 }
+
 
 function buscarMueble(id) {
 const muebles = cargarMueblesLs();
@@ -48,56 +51,21 @@ mueblesEnCarrito([...cargarMueblesCarrito(), mueble]);
 function actualizarCarrito() {
 const mueblesCarrito = mueblesEnCarrito();
 //let total = mueblesCarrito.length;
-let contenido = `<nav class="navbar navbar-expand-lg bg-dark">
-<img class="logo" src="./img/logoMH-02.png" alt="">
-
-<button class="border border-0 navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
+let contenido =  `
+<button type="button" class="carrito1 border border-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight" position-relative"><i class="imgCarrito fa-solid fa-basket-shopping"></i><span class=" span1  start-100 translate-middle badge rounded-pill bg-danger">0</span>
 </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav">
-            <li class="nav-item">
-                <a class="nav-link" href="#">Home</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="index.html">Muebles</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Deco</a>
-            </li>
-        </ul>
-    </div>
-    <!-- Button trigger modal -->
-<div class="boton2">    
-<button type="button" class="boton1 btn btn-outline-light rounded-5 border border-0 position-relative" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-<i class="imgCarrito fa-solid fa-basket-shopping"></i>
-<span class="badge text-bg-danger position-absolute top-0 start-100 translate-middle badge rounded-pill">0</span>
-</button>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+<div class="offcanvas-header">
+<h5 id="offcanvasRightLabel">Carrito de compras</h5>
+<button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 </div>
+<div class="offcanvas-body">
+    ...
+</div>
+</div>`;
 
-<!-- Modal -->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-<div class="modal-dialog">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Carrito de compras</h5>
-    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>
-        <div class="modal-body">
-        Producto producto
-    </div>
-    <div class="modal-footer">
-    <button type="button" class="rounded-pill btn btn-outline-danger">Vaciar carrito <i class="imgTachito fa-regular fa-trash-can"></i></button>
-        <button type="button" class="rounded-pill btn btn-outline-success data-bs-dismiss="modal" onclick="alerta()">Pagar</button>
-        </div>
-        </div>
-    </div>
-</div>
-    
-</div>
-</nav>`;
+document.getElementById("seccionMuebles").innerHTML = contenido;
 
-document.getElementById("carrito").innerHTML = contenido;
 }
 
 function alerta(){
@@ -137,7 +105,9 @@ function compraAprobada(){
         text: "Producto agregado",
         className: "info",
         style: {
+        gravity: "bottom", // `top` or `bottom`
         background: "#aa896d",
+        timer: 500
     }
     }).showToast();
 }
